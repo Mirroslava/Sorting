@@ -95,49 +95,7 @@ int main() {
 	system("pause");
 	return 0;
 }
-void merge(int arr[], int l, int r) {
-	if (r == l)
-		por++;
-		return;
-	if (r - l == 1) {
-		por++;
-		if (arr[r] < arr[l])
-			por++;
-			swap(arr[r], arr[l]);
-			perest++;
-		return;
-	}
-	int m = (r + l) / 2;
-	merge(arr,l, m);
-	merge(arr,m + 1, r);
-	int buf[n];
-	int xl = l;
-	int xr = m + 1;
-	int c = 0;
-	while (r - l + 1 != c) {
-		por++;
-		if (xl > m) {
-			por++;
-			buf[c++] = arr[xr++];
-		}
-		else if (xr > r)
-		{
-			por++;
-			buf[c++] = arr[xl++];
-		}
-		else if (arr[xl] > arr[xr]) {
-			por++;
-			buf[c++] = arr[xr++];
-		}
-		else { 
-			por++;
-			buf[c++] = arr[xl++]; 
-		}
 
-	}
-	for (int i = 0; i < c; i++)
-		arr[i + l] = buf[i];
-}
 void quickSort(int mas[], int s, int n)
 {
 	por = 0;
